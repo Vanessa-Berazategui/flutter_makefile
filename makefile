@@ -78,3 +78,8 @@ run:
 	@echo "╠ Running the application for device $(device)"
 	@fvm flutter run -d $(device)
 
+.PHONY: rename
+rename:
+	@echo "╠ Renaming the app to $(full-name)"
+	flutter pub run change_app_package_name:main $(full-name)
+
