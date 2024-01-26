@@ -83,3 +83,7 @@ rename:
 	@echo "╠ Renaming the app to $(full-name)"
 	fvm flutter pub run change_app_package_name:main $(full-name)
 
+.PHONY: sort
+sort: ## Sorting dependencies
+	@echo "╠ Sorting dependencies..."
+	fvm flutter pub run import_sorter:main
