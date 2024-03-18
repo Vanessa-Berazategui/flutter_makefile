@@ -78,10 +78,15 @@ run:
 	@echo "╠ Running the application for device $(device)"
 	fvm flutter run -d $(device)
 
-.PHONY: rename
-rename:
-	@echo "╠ Renaming the app to $(full-name)"
+.PHONY: rename-package
+rename-package:
+	@echo "╠ Renaming the package app to $(full-name)"
 	fvm flutter pub run change_app_package_name:main $(full-name)
+
+.PHONY: rename-app
+rename-app:
+	@echo "╠ Renaming the app to $(name)"
+	fvm flutter pub run rename_app:main all=$(name)
 
 .PHONY: sort
 sort: ## Sorting dependencies
