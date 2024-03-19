@@ -92,3 +92,7 @@ rename-app:
 sort: ## Sorting dependencies
 	@echo "╠ Sorting dependencies..."
 	fvm flutter pub run import_sorter:main
+
+
+.PHONY: keystore
+keystore: keytool -genkey -v -keystore key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias key	
