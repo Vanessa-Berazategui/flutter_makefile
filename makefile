@@ -104,7 +104,7 @@ test: ## Executing test
 	@echo "╠ Executing unit test and widget test..."
 	fvm flutter test --coverage test/*
 	@echo "╠ Executing integration test..."
-	fvm flutter test --coverage --machine integration_test/* 
+	fvm flutter test --coverage --machine integration_test/* --flavor development
 
 .PHONY: report_test
 report_test: ## Generate report test
